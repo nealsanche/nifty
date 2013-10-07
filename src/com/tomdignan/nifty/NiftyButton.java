@@ -17,6 +17,8 @@ public class NiftyButton extends Button {
     
     public NiftyButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        NiftyTextViewHelper.initialize(this, context, attrs);
+        if (!isInEditMode()) {
+        	NiftyTextViewHelper.initialize(this, context, attrs);
+        }
     }
 }
